@@ -187,12 +187,13 @@ var handler = {
       var eachProp = specials.each
       var idxComma = eachProp.indexOf(',')
       var idxIn = eachProp.indexOf(' in')
+      key = key ? key + ' + ' + strify('_') : strify(uuid.v4() + '_')
 
       if (~idxComma && idxComma < idxIn) {
-        key = strify(uuid.v4() + '_') + ' + ' + eachProp.substring(idxComma + 2, idxIn)
+        key = key + ' + ' + eachProp.substring(idxComma + 2, idxIn)
         eachProp = eachProp.substring(0, idxComma) + eachProp.substr(idxIn)
       } else {
-        key = strify(uuid.v4() + '_') + ' + $item'
+        key = key + ' + $item'
       }
 
       var eachAttr = eachProp
