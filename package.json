@@ -13,7 +13,8 @@
     "build:customelements": "browserify examples/client/x-todos/index.js -t [superviewify --args 'el state'] -d -o examples/client/x-todos/bundle.js",
     "build:examples": "browserify examples/client/x-widget/index.js -t [superviewify --args 'el state ctrl'] -d -o examples/client/x-widget/bundle.js",
     "build:glue": "browserify examples/client/x-glue/index.js -t [superviewify --args 'el state ctrl'] -d -o examples/client/x-glue/bundle.js",
-    "build:readme": "cat test/readme.html | ./bin/cmd.js > test/readme.js"
+    "build:readme": "cat test/readme.html | ./bin/cmd.js > test/readme.js",
+    "test": "karma start test/Karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -35,10 +36,20 @@
   },
   "devDependencies": {
     "brace": "0.9.0",
-    "browserify": "13.1.1",
+    "browserify": "^14.4.0",
+    "istanbul": "^0.4.5",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.4.2",
     "standard": "8.5.0",
     "supermodels.js": "0.2.1",
-    "superviewify": "3.0.0"
+    "superviewify": "3.0.0",
+    "webpack": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/davidjamesstone/superviews.js/issues"

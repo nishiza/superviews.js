@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+%X_UA_COMPATIBLE%
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testbed</title>
+</head>
+<body>
+    <div id="testbed"></div>
+<script src="context.js"></script>
+<script>
+%CLIENT_CONFIG%
+window.__karma__.setupContext(window);
+%MAPPINGS%
+</script>
+%SCRIPTS%
+<script type="text/javascript">
+window.__karma__.loaded();
+</script>
+</body>
+</html>
