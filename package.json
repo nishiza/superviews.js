@@ -23,6 +23,7 @@
   "author": "djs",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.0.2",
     "document-register-element": "1.5.0",
     "dom-delegate": "2.0.3",
     "freezer-js": "0.11.2",
@@ -46,6 +47,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
+    "raw-loader": "^0.5.1",
     "standard": "8.5.0",
     "supermodels.js": "0.2.1",
     "superviewify": "3.0.0",

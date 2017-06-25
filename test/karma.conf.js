@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Tue Jun 20 2017 07:57:21 GMT+0900 (東京 (標準時))
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -13,17 +13,14 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha'],
 
-
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'test/Karma/*Spec.js', watched: false}
     ],
 
-
     // list of files to exclude
     exclude: [
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -32,7 +29,6 @@ module.exports = function(config) {
       'test/**/*Spec.js': ['webpack', 'sourcemap'],
       '**/*.js': 'webpack'
     },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -77,11 +73,11 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     coverageReporter: {
-      dir : 'coverage/',
+      dir: 'coverage/',
       reporters: [
-       { type:'text' },
-       { type:'text-summary' },
-       { type:'lcovonly' }
+       { type: 'text' },
+       { type: 'text-summary' },
+       { type: 'lcovonly' }
       ]
     },
 
@@ -89,14 +85,17 @@ module.exports = function(config) {
       devtool: 'inline-source-map',
       module: {
         rules: [
-        {
-          test: /index\.js/,
-          exclude: /(test|node_modules)/,
-          loader: 'istanbul-instrumenter-loader'
-        }
+          {
+            test: /index\.js/,
+            exclude: /(test|node_modules)/,
+            loader: 'istanbul-instrumenter-loader'
+          }
         ]
       },
       resolve: {
+        alias: {
+          'mocha': 'mocha/mocha.js'
+        }
         // mainFields: ['main']
       }
     }

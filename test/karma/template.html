@@ -1,0 +1,32 @@
+<template name="test" args="data">
+    <div>this is content00.</div>
+    <div class="idTest01">this is content01.</div>
+    <div class="idTest02">this is {data.content02}.</div>
+    <div class="idTest03" id="idTest03"></div>
+    <div class="idTest04" key="keyTest04"></div>
+    <div class="idTest05" each="item in data.items">{item.name}</div>
+    <div class="idTest06" each="item, item.key in data.items">{item.name}</div>
+    <div class="idTest07" key="keyTest07" each="item in data.items">{item.name}</div>
+    <div class="idTest08" key="keyTest08" each="item, item.key in data.items">{item.name}</div>
+    <div class="idTest09" onclick="{console.log()}"></div>
+    <div class="idTest10" style="{display: 'none'}"></div>
+    <div class="idTest11" data-value="{data.value11}"></div>
+    <div class="idTest12" data-value="value.{data.value12}"></div>
+    <div class="idTest13" skip="data.condition13">content13</div>
+    <div class="idTest14" skip="data.condition14">content14</div>
+    <div class="idTest15" if="data.condition15"></div>
+    <div class="idTest16" if="data.condition16"></div>
+    <if     condition="data.condition17"> <div class="idTest17" ></div>
+    <elseif condition="data.condition18"/><div class="idTest18" ></div>
+    <else/>                               <div class="idTest19" ></div>
+    </if>
+    <if     condition="data.condition20"> <div class="idTest20" ></div>
+    <elseif condition="data.condition21"/><div class="idTest21" ></div>
+    <else/>                               <div class="idTest22" ></div>
+    </if>
+    <if     condition="data.condition23"> <div class="idTest23" ></div>
+    <elseif condition="data.condition24"/><div class="idTest24" ></div>
+    <else/>                               <div class="idTest25" ></div>
+    </if>
+    <script>console.log("this is script body.")</script>
+</template>
