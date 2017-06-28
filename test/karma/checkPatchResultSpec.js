@@ -32,7 +32,7 @@ describe('DOM test', () => {
 
   const result = superviews(template, 'test', void 0, 'cjs')
 
-  (new Function(result))()
+  ;(new Function(result))()
 
   const f = global.module.exports
   const data = {
@@ -315,5 +315,11 @@ describe('DOM test', () => {
     const elements = bed.querySelectorAll('.idTest25')
 
     assert.equal(elements.length, 1)
+  })
+
+  it('child 26', () => {
+    assert.exists(data.idTest26)
+
+    assert(data.idTest26.classList.contains('idTest26'))
   })
 })
